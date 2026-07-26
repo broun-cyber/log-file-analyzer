@@ -6,6 +6,7 @@ A Python-based log analyzer for learning security monitoring and basic cybersecu
 - Reads and analyzes log files
 - Counts total log entries
 - Detects failed login attempts
+- Detects and counts successful login events
 - Extracts IP addresses from failed login events
 - Counts failed login attempts by IP address
 - Flags IP addresses with multiple failed login attempts
@@ -25,7 +26,7 @@ A Python-based log analyzer for learning security monitoring and basic cybersecu
 
 1. The user provides the name of a log file.
 2. The program reads all log entries from the file.
-3. It identifies failed login attempts.
+3. It identifies failed and successful login events.
 4. It extracts the source IP address from each failed login event.
 5. It counts failed login attempts for each IP address.
 6. An IP address with **2 or more failed login attempts** is flagged as suspicious.
@@ -44,6 +45,7 @@ Example output:
 
     Total log entries: 6
     Failed login attempts: 3
+    Successful logins: 2
 
     Failed login attempts by IP:
     192.168.1.25: 2
@@ -62,6 +64,7 @@ Through this project, I practiced:
 - Working with dictionaries
 - Extracting data from strings
 - Counting failed login attempts by IP address
+- Detecting and counting successful login events
 - Basic security log analysis
 - Identifying suspicious activity using simple rules
 - Git commits and GitHub workflow
