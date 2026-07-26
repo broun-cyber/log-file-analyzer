@@ -1,0 +1,6 @@
+2026-07-27 10:15:21 INFO User admin logged in successfully from 192.168.1.10
+2026-07-27 10:18:42 WARNING Failed login attempt for user root from 192.168.1.25
+2026-07-27 10:19:03 WARNING Failed login attempt for user admin from 192.168.1.25
+2026-07-27 10:22:17 INFO User admin logged out
+2026-07-27 10:25:51 WARNING Failed login attempt for user root from 10.0.0.15
+2026-07-27 10:27:34 INFO User guest logged in successfully from 192.168.1.30
