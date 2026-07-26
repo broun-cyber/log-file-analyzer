@@ -9,6 +9,7 @@ try:
     print(f"\nTotal log entries: {len(logs)}")
 
     failed_logins = 0
+    successful_logins = 0
     failed_ips = {}
 
     for log in logs:
@@ -22,12 +23,19 @@ try:
             else:
                 failed_ips[ip_address] = 1
 
+        elif "logged in successfully" in log:
+            successful_logins += 1
+
     print(f"Failed login attempts: {failed_logins}")
+    print(f"Successful logins: {successful_logins}")
 
     print("\nFailed login attempts by IP:")
 
-    for ip, count in failed_ips.items():
-        print(f"{ip}: {count}")
+    if failed_ips:
+        for ip, count in failed_ips.items():
+            print(f"{ip}: {count}")
+    else:
+        print("No failed login attempts found.")
 
     print("\nSuspicious IPs:")
 
